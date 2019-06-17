@@ -1,0 +1,24 @@
+<!--  -->
+<div fxLayout="row"   fxLayoutGap="10px">
+    
+  <form [formGroup]="searchForm" class="searchbar" (ngSubmit)="searchItem()">
+    <span fxFlex="80%" >
+    <mat-form-field>
+      <mat-icon matPrefix>search</mat-icon><input placeholder="What Your Looking For..?" matInput
+        formControlName="search" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+      </mat-autocomplete>
+    </mat-form-field>
+    </span>
+
+    <div fxFlex="10%">
+      <button class="searchbtn" mat-flat-button color="primary" >Search</button>
+    </div>
+  </form>
+
+  <div fxFlex="10%" class="profile" >
+     
+      <mat-icon matPrefix class="pimg">shopping_cart</mat-icon>
+      <mat-icon matPrefix class="pimg">account_circle</mat-icon>
+  </div>
+</div>

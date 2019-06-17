@@ -1,0 +1,43 @@
+<!-- <img src="../" width="250px" height="200px">
+  <div class="hoteldesc">
+    <h2>img</h2>
+    <p>hvhlghjhk</p>
+    <span class="rating"><mat-icon>star</mat-icon>5</span>&nbsp;<span>$200</span>
+    <div>
+    <button mat-raised-button class="viewbtn">View Details</button>&nbsp;&nbsp;
+      <button mat-raised-button color="primary">Book Now</button>
+    </div>  
+</div> -->
+<div class="container">
+
+    <!-- <span class="total"> Results</span>
+ 
+    <div class="sort"><span>SORT BY</span> &nbsp;
+      <span><mat-icon>swap_vertical</mat-icon>Ratings Only</span>&nbsp;
+      <span><mat-icon>swap_vertical</mat-icon>Price Only</span>
+      </div>
+      <div class="clear"></div>
+   -->
+  <mat-divider></mat-divider>
+  <br>
+  <div fxLayout="row wrap" fxLayoutGap="15px">
+    <div class="display" *ngFor="let p of products"  >
+      
+        <h2>img</h2>
+        <img src="{{p.imagePath}}" height="300px" width="250px">
+        <p>Charm looking {{p.name}}</p>
+        <span class="rating"><mat-icon>star</mat-icon>{{p.rating}}</span>&nbsp;<span><mat-icon>{{p.Price|currency:'&#8377;'}}</mat-icon>200</span>
+        <div>
+            <button mat-raised-button class="viewbtn">View</button>&nbsp;&nbsp;
+              <button mat-raised-button color="primary">Add Cart</button>
+            </div>         
+        <mat-divider></mat-divider>
+        
+    </div> 
+
+
+
+   
+  </div>
+
+</div>

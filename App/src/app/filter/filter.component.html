@@ -1,0 +1,14 @@
+
+<h4>Category</h4>
+<form [formGroup] = "namesearch">
+<mat-form-field>
+  <mat-label>Category</mat-label>
+  <mat-select formControlName="categorySearch" name="categorySearch">
+    <mat-option *ngFor="let Cloth of clothes" [value]="Cloth.category">
+      {{Cloth.category}}
+    </mat-option>
+  </mat-select>
+</mat-form-field><br>
+<mat-label>Price : </mat-label><mat-slider step="1" min="100" max="10000"></mat-slider>
+</form>
+

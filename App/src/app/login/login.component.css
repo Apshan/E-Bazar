@@ -1,0 +1,18 @@
+.signin{ width:40%;  float:right;
+
+
+}
+.check{
+    float:left;
+    color: blue;
+    width:40%;
+    text-align: left;
+}
+
+.forgot{
+    float:right;
+    color: blue;
+    width:60%;
+    text-align: right;
+}
+.clear{ clear: both;}
