@@ -15,7 +15,7 @@ export class FilterComponent implements OnInit {
 
   clothes: product[] = productlist;
   //form control. value change
-
+ 
 
   constructor(private productService : ProductlistService) { }
 
@@ -24,11 +24,13 @@ export class FilterComponent implements OnInit {
   }
 
   namesearch = new FormGroup({
-    categorySearch: new FormControl('')
+    categorySearch: new FormControl(''),
+    minValue: new FormControl(100),
+    maxValue: new FormControl(10000)
   })
 
   changes(): void {
-    this.namesearch.get('categorySearch').valueChanges.subscribe(cat => {
+    this.namesearch.valueChanges.subscribe(cat => {
       console.log(cat)
       this.productService.filterSearch(cat)
     });

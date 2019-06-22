@@ -17,7 +17,7 @@
 
  <router-outlet></router-outlet>
  -->
- <div style="width:90%; margin:auto;"><app-search></app-search></div>
+ <!-- <div style="width:90%; margin:auto;"><app-header></app-header></div>
  <div class="container"
  fxLayout="row" fxLayoutAlign="center"
  fxLayoutGap="10px">
@@ -27,4 +27,19 @@
 
 
 </div>
+ -->
+ <mat-toolbar color="primary">
+    <div class="menuleft">
+        <span> {{ title }}!</span>
+      </div>
+    
+      <div class="menuright">
+          <span routerLink="/login">Login</span>
+          <span routerLink="/register">Register</span>
+        </div>
+    <div class="clear"></div>
+    <a routerLink="/head" routerLinkActive="active">Shopping</a>
+    <mat-icon>add_shopping_cart</mat-icon><span routerLink="/cart"> {{data.length}}</span>
+ </mat-toolbar>
 
+ <router-outlet></router-outlet>

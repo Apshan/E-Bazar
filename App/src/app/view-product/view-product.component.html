@@ -26,10 +26,10 @@
         <h2>img</h2>
         <img src="{{p.imagePath}}" height="300px" width="250px">
         <p>Charm looking {{p.name}}</p>
-        <span class="rating"><mat-icon>star</mat-icon>{{p.rating}}</span>&nbsp;<span><mat-icon>{{p.Price|currency:'&#8377;'}}</mat-icon>200</span>
+        <span class="rating"><mat-icon>star</mat-icon>{{p.rating}}</span>&nbsp;<span><mat-icon>{{p.price|currency:'&#8377;'}}</mat-icon>{{p.price}}</span>
         <div>
             <button mat-raised-button class="viewbtn">View</button>&nbsp;&nbsp;
-              <button mat-raised-button color="primary">Add Cart</button>
+              <button mat-raised-button color="primary" (click)="addToCart(p)">Add Cart</button>
             </div>         
         <mat-divider></mat-divider>
         

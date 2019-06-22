@@ -1,4 +1,5 @@
 export class product {
+    id: number;
     name: string;
     imagePath: string;
     rating: number;

@@ -1,6 +1,6 @@
 .signin{ width:40%;  float:right;
-
-
+    opacity:0.8;
+    margin: 120px;
 }
 .check{
     float:left;
@@ -16,3 +16,6 @@
     text-align: right;
 }
 .clear{ clear: both;}
+.bgimage{ background-image: url('/src/assets/images/loginBackground.jpg');
+background-repeat: no-repeat; background-size: cover;
+height: 600px;}

@@ -1,0 +1,32 @@
+
+
+  <!-- <div class="display" *ngFor="let p of data"  >
+
+    <img src="{{p.imagePath}}" height="300px" width="250px">
+    <p>Charm looking {{p.name}}</p>
+    <span><mat-icon>{{p.price|currency:'&#8377;'}}</mat-icon>{{p.price}}</span>
+    <button (click)="removeToCart1(p)">Delete</button>
+  </div>
+ -->
+ <div class="productlist"  >
+  <mat-card  *ngFor="let itemQuantity of data;index as i">
+  <div >
+    <div  class="cartImg">
+       <img src={{itemQuantity.product.imagePath}}>
+    </div>
+     <div class="detail">
+        <mat-card-title>{{itemQuantity.name}}</mat-card-title>
+        <span class="productdetail"><mat-icon class="star">star</mat-icon> {{itemQuantity.product.rating}}</span>
+        <p>Price:{{itemQuantity.product.price}}</p>
+        <!-- qty<input mat-input type="number" [(ngModel)]="q[i]" (change)="getqty(q[i])" /> -->
+        <td><mat-icon (click)="removeQuatity(itemQuantity.product)">remove_circle</mat-icon>{{itemQuantity.quantity}}<mat-icon  (click)="addQuatity(itemQuantity.product)">add_circle</mat-icon>
+        <button mat-raised-button color="primary" (click)="removeToCart1(itemQuantity)">Remove</button>
+        </div>
+  
+      <div class="clear"></div>
+  </div>
+  </mat-card>
+  <button mat-raised-button  class="btncheckout" color="sucess" (click)="checkFun(itemQuantity)">Place Order</button>
+  <mat-card-title style="margin-top: 30px;">Cart Total:{{totalPrice}}</mat-card-title>
+  
+  </div>

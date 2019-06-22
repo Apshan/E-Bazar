@@ -1,0 +1,27 @@
+
+<div class="productlist"  >
+  <div *ngFor="let data of liveorderlist">
+  <div >
+    
+    <mat-card  *ngFor="let products of data.cart.ProductQuantityList">
+        <div>{{data.date}}</div>
+    <div  class="cartImg">
+       <img src="{{products.product.imagePath}}"  >
+      
+    </div>
+     <div class="detail">
+        <mat-card-title>{{products.product.name}}</mat-card-title>
+        <span class="productdetail"><mat-icon class="star">star</mat-icon> {{products.product.rating}}</span>
+        <p>Price:{{products.product.price}}</p>
+        <!-- qty<input mat-input type="number" [(ngModel)]="q[i]" (change)="getqty(q[i])" /> -->
+        </div>
+      </mat-card>
+      </div>
+      <div class="clear"></div>
+      <mat-card-title style="margin-top: 30px;">Cart Total:{{data.cart.grandTotal}}</mat-card-title>
+  </div>
+ 
+ 
+  
+  
+  </div>

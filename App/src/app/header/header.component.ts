@@ -23,7 +23,11 @@ export class HeaderComponent implements OnInit {
    
   }
   searchItem(){
-    this.productService.SearchedProductList(this.searchForm.value.search);
+    //  this.productService.SearchedProductList(this.searchForm.value.search);
+    
+      this.productService.SearchedProductList(this.searchForm.value)
+
+
   }
 
 }

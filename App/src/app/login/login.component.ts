@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   
       if(this.username == 'admin' && this.password == 'admin'){
   
-       this.router.navigate(["user"]);
+       this.router.navigate(["head"]);
   alert("Valid credentrials");
       }else {
   

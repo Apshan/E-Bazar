@@ -12,14 +12,20 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { RegisterformComponent } from './registerform/registerform.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { RouterModule, Routes } from '@angular/router';
-import { routes } from './app.routes';
+// import { routes } from './app.routes';
 import { from } from 'rxjs';
 import { MatToolbarModule, MatSelectModule, MatDividerModule, MatButtonModule } from '@angular/material';
 import { FilterComponent } from './filter/filter.component';
 import {MatSliderModule} from '@angular/material/slider';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { SearchComponent } from './search/search.component';
+import { HeaderComponent } from './header/header.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { HeadComponent } from './core modules/head/head.component';
+import { CartComponent } from '../app/cart/cart.component';
+import { OrderComponent } from './order/order.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
+//import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,12 @@ import { SearchComponent } from './search/search.component';
     RegisterformComponent,
     FilterComponent,
     ViewProductComponent,
-    SearchComponent
+    HeaderComponent,
+    HeadComponent,
+    CartComponent,
+    OrderComponent,
+    OrderhistoryComponent,
+    //CartComponent
     
   ],
   imports: [
@@ -41,13 +52,14 @@ import { SearchComponent } from './search/search.component';
     MatCheckboxModule,
     ReactiveFormsModule,
     MatRadioModule,
-    RouterModule.forRoot(routes),
+    // RouterModule.forRoot(routes),
     MatToolbarModule,
     MatSelectModule,
     MatSliderModule,
     MatDividerModule,
     MatButtonModule,
     FlexLayoutModule,
+    MatAutocompleteModule
     
     // FlexLayoutModule.forRoot()
   ],

@@ -4,11 +4,18 @@
 <mat-form-field>
   <mat-label>Category</mat-label>
   <mat-select formControlName="categorySearch" name="categorySearch">
-    <mat-option *ngFor="let Cloth of clothes" [value]="Cloth.category">
-      {{Cloth.category}}
-    </mat-option>
+    <!-- <mat-option *ngFor="let Cloth of clothes" [value]="Cloth.category"> -->
+   
+      <mat-option  value='kids'>kids</mat-option>
+      <mat-option value='men'>mens</mat-option>
+      <mat-option value='women'>womens</mat-option>
+      <!-- {{Cloth.category}} -->
+  
   </mat-select>
 </mat-form-field><br>
-<mat-label>Price : </mat-label><mat-slider step="1" min="100" max="10000"></mat-slider>
+<mat-label>Price : </mat-label>
+<mat-slider step="1" min="100" max="10000" formControlName="minValue" name="slidersearch"></mat-slider>
+<span> {{namesearch.value.minValue}}</span>
+<span style="float:right">  {{namesearch.value.maxValue}}</span>
 </form>
 

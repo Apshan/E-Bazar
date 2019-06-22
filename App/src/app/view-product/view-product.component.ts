@@ -28,4 +28,9 @@ export class ViewProductComponent implements OnInit {
     this.category.getcategory()
     .subscribe(hero => this.categorylist =hero);
   }
+
+  addToCart(p:product) {
+    console.log(p);
+    this.productService.addToCart(p);
+  }
 }
